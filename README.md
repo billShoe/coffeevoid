@@ -1,6 +1,4 @@
-# Welcome to the pit of despair 
-Where good coding practices go to die
+# This is the source code for coffeevoid.com 
+Feel free to tell me everything I do wrong
 
-Sit back, relax and enjoy the ride.
-
-I apologize for nothing.
+It's gonna be a lot
