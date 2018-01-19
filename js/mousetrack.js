@@ -9,13 +9,13 @@ $(document).ready(function() {
     let distanceX = Math.abs(pageX-width)
     let newvalueX = function(){
       if (pageX > width/2) {
-        return (50 - (pageX-width)/2/speed);
-      }else { return(50 + (width-pageX)/2/speed);}
+        return (48 - (pageX-width)/2/speed);
+      }else { return(48 + (width-pageX)/2/speed);}
     };
     let newvalueY = function(){
-      if (pageY > width/2) {
-        return (50 - (pageY-width)/2/speed);
-      }else { return(50 + (width-pageY)/2/speed);}
+      if (pageY > height/2) {
+        return (50 - (pageY-height)/speed);
+      }else { return(50 + (height-pageY)/speed);}
     };
 
     $('#mouse-image').css("background-position", newvalueX()+"% "+newvalueY()+"% ");
@@ -35,9 +35,9 @@ $(document).ready(function() {
       }else { return(50 + (width-pageX)/2/speed);}
     };
     let newvalueY = function(){
-      if (pageY > width/2) {
-        return (50 - (pageY-width)/2/speed);
-      }else { return(50 + (width-pageY)/2/speed);}
+      if (pageY > height/2) {
+        return (50 - (pageY-height)/2/speed);
+      }else { return(50 + (height-pageY)/2/speed);}
     };
 
     $('#back-image').css("background-position", newvalueX()+"% "+newvalueY()+"% ");

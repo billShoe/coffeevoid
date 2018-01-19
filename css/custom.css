@@ -20,7 +20,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 80vh;
+  height: 100%;
   width: 100%;
   z-index: 0;
 }
@@ -29,7 +29,7 @@ body {
   float: left;
   width: 30%;
   height: 2.5em;
-  background-color: #3c3c3c;
+  background-color: inherit;
   text-align: center;
   font-size: 3em;
   padding-bottom: auto;
@@ -70,4 +70,5 @@ body {
 }
 
 #mouse-container {
+  height: 100%;
 }
