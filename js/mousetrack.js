@@ -1,12 +1,45 @@
 $(document).ready(function() {
-  var movementStrength = 50;
-  var height = movementStrength / $(window).height() ;
-  var width = movementStrength / $(window).width() /2;
-  $("#mouse-image").mousemove(function(e){
-    var pageX = e.pageX;
-    var pageY = e.pageY;
-    var newvalueX = width * pageX * -1 + 50;
-    var newvalueY = height * pageY * 1 + 50;
-    $('#mouse-image').css("background-position", newvalueX+"% "+newvalueY+"% ");
+  let speed = 100 ;   //Higher number is slower...
+  let width = $(window).width() ;
+  let height = $(window).height() ;
+
+  $("#mouse-container").mousemove(function(e){
+    let pageX = e.pageX;
+    let pageY = e.pageY;
+    let distanceX = Math.abs(pageX-width)
+    let newvalueX = function(){
+      if (pageX > width/2) {
+        return (50 - (pageX-width)/2/speed);
+      }else { return(50 + (width-pageX)/2/speed);}
+    };
+    let newvalueY = function(){
+      if (pageY > width/2) {
+        return (50 - (pageY-width)/2/speed);
+      }else { return(50 + (width-pageY)/2/speed);}
+    };
+
+    $('#mouse-image').css("background-position", newvalueX()+"% "+newvalueY()+"% ");
+  });
+});
+
+$(document).ready(function() {
+  let speed = 50 ;   //Higher number is slower...
+  let width = $(window).width() ;
+  let height = $(window).height() ;
+  $("#mouse-container").mousemove(function(e){
+    let pageX = e.pageX;
+    let pageY = e.pageY;
+    let newvalueX = function(){
+      if (pageX > width/2) {
+        return (50 - (pageX-width)/2/speed);
+      }else { return(50 + (width-pageX)/2/speed);}
+    };
+    let newvalueY = function(){
+      if (pageY > width/2) {
+        return (50 - (pageY-width)/2/speed);
+      }else { return(50 + (width-pageY)/2/speed);}
+    };
+
+    $('#back-image').css("background-position", newvalueX()+"% "+newvalueY()+"% ");
   });
 });

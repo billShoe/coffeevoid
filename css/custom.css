@@ -3,32 +3,35 @@ body {
 }
 
 .container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   width: 100%;
   height auto;
   overflow: hidden;
   margin: 10px auto 10px auto;
-  padding-left: 2%;
   position: fixed;
-  bottom: 0px;
+  bottom: 0;
+  left: 0;
   z-index: 1;
 }
 
 .main-logo{
   position: absolute;
+  top: 0;
+  left: 0;
   height: 80vh;
   width: 100%;
-  background-color: #3c3c3c;
+  z-index: 0;
 }
 
 .card{
   float: left;
   width: 30%;
   height: 2.5em;
-  margin: 10px 3% 10px 0;
   background-color: #3c3c3c;
   text-align: center;
   font-size: 3em;
-  padding-top: 1em;
   padding-bottom: auto;
   color: white;
 }
@@ -45,11 +48,26 @@ body {
   background-repeat: no-repeat;
   top:0;
   height: 100%;
-  z-index:0;
+  z-index: 2;
   height:100%;
-  background-size: calc(50% + 50px);
+  background-size: 500px;
 }
 
-.mouse-container {
+#back-image {
+  background:url('../images/logowhite.png');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  top:0;
+  height: 100%;
+  z-index: 3;
+  height:100%;
+  background-size: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: inherit;
+}
 
+#mouse-container {
 }
